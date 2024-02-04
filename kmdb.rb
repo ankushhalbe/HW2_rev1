@@ -30,6 +30,102 @@
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
+
+new_studio = Studio.new
+new_studio ["name"] = "Warner Bros."
+new_studio.save
+puts new_studio.inspect
+
+puts "There are #{Studio.all.count} studios"
+
+Studio1 = Studio.find_by ({"name" => "Warner Bros."})
+puts Studio1.inspect
+
+new_movie1 = Movie.new
+new_movie1 ["title"] = "Batman Begins"
+new_movie1 ["year_released"] = 2005
+new_movie1 ["rated"] = "PG-13"
+new_movie1 ["Studio_id"] = Studio1 ["id"]
+new_movie1.save
+puts new_movie1.inspect
+
+new_movie2 = Movie.new
+new_movie2 ["title"] = "The Dark Knight"
+new_movie2 ["year_released"] = 2008
+new_movie2 ["rated"] = "PG-13"
+new_movie2.save
+puts new_movie2.inspect
+
+new_movie3 = Movie.new
+new_movie3 ["title"] = "The Dark Knight Rises"
+new_movie3 ["year_released"] = 2012
+new_movie3 ["rated"] = "PG-13"
+new_movie3.save
+puts new_movie3.inspect
+
+puts "There are #{Movie.all.count} movies"
+
+new_actor1 = Actor.new
+new_actor1 ["name"] = "Christian Bale"
+new_actor1.save
+puts new_actor1.inspect
+
+new_actor2 = Actor.new
+new_actor2 ["name"] = "Michael Caine"
+new_actor2.save
+puts new_actor2.inspect
+
+new_actor3 = Actor.new
+new_actor3 ["name"] = "Liam Neeson"
+new_actor3.save
+puts new_actor3.inspect
+
+new_actor4 = Actor.new
+new_actor4 ["name"] = "Katie Holmes"
+new_actor4.save
+puts new_actor4.inspect
+
+new_actor5 = Actor.new
+new_actor5 ["name"] = "Gary Oldman"
+new_actor5.save
+puts new_actor5.inspect
+
+new_actor6 = Actor.new
+new_actor6 ["name"] = "Heath Ledger"
+new_actor6.save
+puts new_actor6.inspect
+
+new_actor7 = Actor.new
+new_actor7 ["name"] = "Aaron Eckhart"
+new_actor7.save
+puts new_actor7.inspect
+
+new_actor8 = Actor.new
+new_actor8 ["name"] = "Maggie Gyllenhaal"
+new_actor8.save
+puts new_actor8.inspect
+
+new_actor9 = Actor.new
+new_actor9 ["name"] = "Tom Hardy"
+new_actor9.save
+puts new_actor9.inspect
+
+new_actor10 = Actor.new
+new_actor10 ["name"] = "Joseph Gordon-Levitt"
+new_actor10.save
+puts new_actor10.inspect
+
+new_actor11 = Actor.new
+new_actor11 ["name"] = "Anne Hathway"
+new_actor11.save
+puts new_actor11.inspect
+
+puts "There are #{Actor.all.count} actors"
+
 # Submission
 # 
 # - "Use this template" to create a brand-new "hw2" repository in your
