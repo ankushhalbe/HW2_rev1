@@ -42,14 +42,14 @@ puts new_studio.inspect
 
 puts "There are #{Studio.all.count} studios"
 
-Studio1 = Studio.find_by ({"name" => "Warner Bros."})
-puts Studio1.inspect
+studio1 = Studio.find_by ({"name" => "Warner Bros."})
+puts studio1.inspect
 
 new_movie1 = Movie.new
 new_movie1 ["title"] = "Batman Begins"
 new_movie1 ["year_released"] = 2005
 new_movie1 ["rated"] = "PG-13"
-#new_movie1 ["studio_id"] = Studio1 ["id"]
+new_movie1 ["studio_id"] = studio1 ["id"]
 new_movie1.save
 puts new_movie1.inspect
 
@@ -57,6 +57,7 @@ new_movie2 = Movie.new
 new_movie2 ["title"] = "The Dark Knight"
 new_movie2 ["year_released"] = 2008
 new_movie2 ["rated"] = "PG-13"
+new_movie2 ["studio_id"] = studio1 ["id"]
 new_movie2.save
 puts new_movie2.inspect
 
@@ -64,6 +65,7 @@ new_movie3 = Movie.new
 new_movie3 ["title"] = "The Dark Knight Rises"
 new_movie3 ["year_released"] = 2012
 new_movie3 ["rated"] = "PG-13"
+new_movie3 ["studio_id"] = studio1 ["id"]
 new_movie3.save
 puts new_movie3.inspect
 
@@ -126,16 +128,17 @@ puts new_actor11.inspect
 
 puts "There are #{Actor.all.count} actors"
 
-Movie1 = Movie.find_by ({"title" => "Batman Begins"})
-puts Movie1.inspect
+movie1 = Movie.find_by ({"title" => "Batman Begins"})
+puts movie1.inspect
 
-Actor_Christian = Actor.find_by ({"name" => "Christian Bale"})
-puts Actor_Christian.inspect
+actor_christian = Actor.find_by ({"name" => "Christian Bale"})
+puts actor_christian.inspect
 
 new_role1 = Role.new
 new_role1 ["character_name"] = "Bruce Wayne"
-#new_role1 ["movie_id"] = Movie1 ["id"]
-#new_role1 ["actor_id"] = Actor_Christian ["id"]
+new_role1 ["movie_id"] = movie1 ["id"]
+new_role1 ["actor_id"] = actor_christian ["id"]
+new_role1.save
 puts new_role1.inspect
 
 
