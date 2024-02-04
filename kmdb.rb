@@ -49,7 +49,7 @@ new_movie1 = Movie.new
 new_movie1 ["title"] = "Batman Begins"
 new_movie1 ["year_released"] = 2005
 new_movie1 ["rated"] = "PG-13"
-new_movie1 ["Studio_id"] = Studio1 ["id"]
+#new_movie1 ["studio_id"] = Studio1 ["id"]
 new_movie1.save
 puts new_movie1.inspect
 
@@ -125,6 +125,21 @@ new_actor11.save
 puts new_actor11.inspect
 
 puts "There are #{Actor.all.count} actors"
+
+Movie1 = Movie.find_by ({"title" => "Batman Begins"})
+puts Movie1.inspect
+
+Actor_Christian = Actor.find_by ({"name" => "Christian Bale"})
+puts Actor_Christian.inspect
+
+new_role1 = Role.new
+new_role1 ["character_name"] = "Bruce Wayne"
+#new_role1 ["movie_id"] = Movie1 ["id"]
+#new_role1 ["actor_id"] = Actor_Christian ["id"]
+puts new_role1.inspect
+
+
+
 
 # Submission
 # 
