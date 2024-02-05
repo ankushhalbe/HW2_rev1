@@ -122,7 +122,7 @@ new_actor10.save
 puts new_actor10.inspect
 
 new_actor11 = Actor.new
-new_actor11 ["name"] = "Anne Hathway"
+new_actor11 ["name"] = "Anne Hathaway"
 new_actor11.save
 puts new_actor11.inspect
 
@@ -141,8 +141,148 @@ new_role1 ["actor_id"] = actor_christian ["id"]
 new_role1.save
 puts new_role1.inspect
 
+actor_michael = Actor.find_by ({"name" => "Michael Caine"})
+puts actor_michael.inspect
 
+new_role2 = Role.new
+new_role2 ["character_name"] = "Alfred"
+new_role2 ["movie_id"] = movie1 ["id"]
+new_role2 ["actor_id"] = actor_michael ["id"]
+new_role2.save
+puts new_role2.inspect
 
+actor_liam = Actor.find_by ({"name" => "Liam Neeson"})
+puts actor_liam.inspect
+
+new_role3 = Role.new
+new_role3 ["character_name"] = "Ra's Al Ghul"
+new_role3 ["movie_id"] = movie1 ["id"]
+new_role3 ["actor_id"] = actor_michael ["id"]
+new_role3.save
+puts new_role3.inspect
+
+actor_katie = Actor.find_by ({"name" => "Katie Holmes"})
+puts actor_katie.inspect
+
+new_role4 = Role.new
+new_role4 ["character_name"] = "Rachel Dawes"
+new_role4 ["movie_id"] = movie1 ["id"]
+new_role4 ["actor_id"] = actor_katie ["id"]
+new_role4.save
+puts new_role4.inspect
+
+actor_gary = Actor.find_by ({"name" => "Gary Oldman"})
+puts actor_gary.inspect
+
+new_role5 = Role.new
+new_role5 ["character_name"] = "Commissioner Gordon"
+new_role5 ["movie_id"] = movie1 ["id"]
+new_role5 ["actor_id"] = actor_gary ["id"]
+new_role5.save
+puts new_role4.inspect
+
+movie2 = Movie.find_by ({"title" => "The Dark Knight"})
+puts movie2.inspect
+
+new_role6 = Role.new
+new_role6 ["character_name"] = "Bruce Wayne"
+new_role6 ["movie_id"] = new_movie2 ["id"]
+new_role6 ["actor_id"] = actor_christian ["id"]
+new_role6.save
+puts new_role6.inspect
+
+actor_heath = Actor.find_by ({"name" => "Heath Ledger"})
+puts actor_heath.inspect
+
+new_role7 = Role.new
+new_role7 ["character_name"] = "Joker"
+new_role7 ["movie_id"] = movie2 ["id"]
+new_role7 ["actor_id"] = actor_heath ["id"]
+new_role7.save
+puts new_role7.inspect
+
+actor_aaron = Actor.find_by ({"name" => "Aaron Eckhart"})
+puts actor_aaron.inspect
+
+new_role8 = Role.new
+new_role8 ["character_name"] = "Harvey Dent"
+new_role8 ["movie_id"] = movie2 ["id"]
+new_role8 ["actor_id"] = actor_aaron["id"]
+new_role8.save
+puts new_role8.inspect
+
+actor_michael = Actor.find_by ({"name" => "Michael Caine"})
+puts actor_michael.inspect
+
+new_role9 = Role.new
+new_role9 ["character_name"] = "Alfred"
+new_role9 ["movie_id"] = movie2 ["id"]
+new_role9 ["actor_id"] = actor_michael ["id"]
+new_role9.save
+puts new_role9.inspect
+
+actor_maggie = Actor.find_by ({"name" => "Maggie Gyllenhaal"})
+puts actor_maggie.inspect
+
+new_role10 = Role.new
+new_role10 ["character_name"] = "Rachel Dawes"
+new_role10 ["movie_id"] = movie2 ["id"]
+new_role10 ["actor_id"] = actor_maggie ["id"]
+new_role10.save
+puts new_role10.inspect
+
+movie3 = Movie.find_by ({"title" => "The Dark Knight Rises"})
+puts movie2.inspect
+
+actor_christian = Actor.find_by ({"name" => "Christian Bale"})
+puts actor_christian.inspect
+
+new_role11 = Role.new
+new_role11 ["character_name"] = "Bruce Wayne"
+new_role11 ["movie_id"] = movie3 ["id"]
+new_role11 ["actor_id"] = actor_christian ["id"]
+new_role11.save
+puts new_role11.inspect
+
+actor_gary = Actor.find_by ({"name" => "Gary Oldman"})
+puts actor_gary.inspect
+
+new_role12 = Role.new
+new_role12 ["character_name"] = "Commissioner Gordon"
+new_role12 ["movie_id"] = movie3 ["id"]
+new_role12 ["actor_id"] = actor_gary ["id"]
+new_role12.save
+puts new_role12.inspect
+
+actor_tom = Actor.find_by ({"name" => "Tom Hardy"})
+puts actor_tom.inspect
+
+new_role12 = Role.new
+new_role12 ["character_name"] = "Bane"
+new_role12 ["movie_id"] = movie3 ["id"]
+new_role12 ["actor_id"] = actor_tom ["id"]
+new_role12.save
+puts new_role12.inspect
+
+actor_joseph = Actor.find_by ({"name" => "Joseph Gordon-Levitt"})
+puts actor_joseph.inspect
+
+new_role13 = Role.new
+new_role13 ["character_name"] = "John Blake"
+new_role13 ["movie_id"] = movie3 ["id"]
+new_role13 ["actor_id"] = actor_joseph ["id"]
+new_role13.save
+puts new_role13.inspect
+
+actor_anne = Actor.find_by ({"name" => "Anne Hathaway"})
+puts actor_anne.inspect
+
+new_role14 = Role.new
+new_role14 ["character_name"] = "Selina Kyle"
+new_role14 ["movie_id"] = movie3 ["id"]
+new_role14 ["actor_id"] = actor_anne ["id"]
+new_role14.save
+puts new_role14.inspect
 
 # Submission
 # 
@@ -195,7 +335,7 @@ puts new_role1.inspect
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
-puts ""
+puts "XXX"
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
@@ -204,7 +344,7 @@ puts ""
 puts ""
 puts "Top Cast"
 puts "========"
-puts ""
+puts "YYY"
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
