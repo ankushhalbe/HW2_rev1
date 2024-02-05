@@ -336,13 +336,13 @@ new_role14.save
 puts "Movies"
 puts "======"
 studio1 = Studio.find_by({"name" => "Warner Bros."})
-#puts studio1 ["id"]
 movie_all = Movie.where({"studio_id" => studio1["id"]})
 
 for mov in movie_all
     mov_studio = Studio.find_by({"id" => mov ["studio_id"]})
     puts "#{mov["title"]} #{mov["year_released"]} #{mov["rated"]} #{mov_studio ["name"]}"
 end
+
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
@@ -350,8 +350,17 @@ end
 puts "Top Cast"
 puts "========"
 
+movie1 = Movie.find_by ({"title" => "Batman Begins"})
+roles = Role.where({"movie_id" => movie1["id"]})
 
-puts "YYY"
+for role in roles
+    mov_batman = Movie.find_by({"id" => role ["movie_id"]})
+    actor_a = Actor.find_by ({"id" => role ["actor_id"]})
+    puts "#{mov_batman["title"]} #{actor_a["name"]} #{role["character_name"]}" 
+end
+
+
+
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
