@@ -347,9 +347,10 @@ end
 # TODO!
 
 # Prints a header for the cast output
-puts ""
 puts "Top Cast"
 puts "========"
+
+
 puts "YYY"
 
 # Query the cast data and loop through the results to display the cast output for each movie.
